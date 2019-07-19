@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.yegorbabarykin</groupId>
+    <artifactId>spring-mvc-logger</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.1.8.RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.26</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+    </dependencies>
+
+    <name>Spring MVC Request/Response logger</name>
+    <description>Log Inbound requests and Outbound responses to </description>
+    <url>https://github.com/YegorBabarykin/spring-mvc-logger</url>
+
+    <organization>
+        <name>com.github.yegorbabarykin</name>
+        <url>https://github.com/YegorBabarykin/</url>
+    </organization>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/YegorBabarykin/spring-mvc-logger/issues</url>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://github.com/YegorBabarykin/spring-mvc-logger/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/YegorBabarykin/spring-mvc-logger</url>
+        <connection>
+            scm:git:git://github.com/YegorBabarykin/spring-mvc-logger.git
+        </connection>
+        <developerConnection>
+            scm:git:ssh://git@github.com:YegorBabarykin/spring-mvc-logger.git
+        </developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <name>YegorBabarykin</name>
+        </developer>
+    </developers>
+    
+</project>
