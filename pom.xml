@@ -51,7 +51,7 @@
     </dependencies>
 
     <name>Spring MVC Request/Response logger</name>
-    <description>Log Inbound requests and Outbound responses to </description>
+    <description>Log Inbound requests and Outbound responses</description>
     <url>https://github.com/YegorBabarykin/spring-mvc-logger</url>
 
     <organization>
