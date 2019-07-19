@@ -1,6 +1,6 @@
-package com.github.yegorbabarykin.spring_mwc_logger;
+package com.github.yegorbabarykin.spring.mvc.logger;
 
-import com.github.yegorbabarykin.spring_mwc_logger.common.OptionalCollection;
+import com.github.yegorbabarykin.spring.mvc.logger.common.OptionalCollection;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;

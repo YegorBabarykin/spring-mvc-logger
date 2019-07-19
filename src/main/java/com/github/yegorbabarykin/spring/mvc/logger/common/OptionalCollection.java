@@ -1,4 +1,4 @@
-package com.github.yegorbabarykin.spring_mwc_logger.common;
+package com.github.yegorbabarykin.spring.mvc.logger.common;
 
 import java.util.Collection;
 import java.util.Optional;

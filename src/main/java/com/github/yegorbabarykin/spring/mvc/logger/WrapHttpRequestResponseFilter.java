@@ -1,4 +1,4 @@
-package com.github.yegorbabarykin.spring_mwc_logger;
+package com.github.yegorbabarykin.spring.mvc.logger;
 
 import org.springframework.web.cors.CorsUtils;
 import org.springframework.web.filter.OncePerRequestFilter;

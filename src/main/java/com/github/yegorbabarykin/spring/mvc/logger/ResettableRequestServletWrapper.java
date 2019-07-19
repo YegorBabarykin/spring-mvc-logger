@@ -1,4 +1,4 @@
-package com.github.yegorbabarykin.spring_mwc_logger;
+package com.github.yegorbabarykin.spring.mvc.logger;
 
 import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
