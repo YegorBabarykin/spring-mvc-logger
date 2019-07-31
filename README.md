@@ -7,7 +7,7 @@ Add dependency in pom.xml
 <dependency>
     <groupId>com.github.yegorbabarykin</groupId>
     <artifactId>spring-mvc-logger</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </dependency>
 ```
 Or in gradle

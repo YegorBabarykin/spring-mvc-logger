@@ -8,6 +8,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.function.Function;
@@ -20,9 +21,10 @@ public class RequestLoggingInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(final HttpServletRequest servletRequest,
                              final HttpServletResponse servletResponse,
                              final Object handler) throws Exception {
-        Map<String, String> headers = Collections.list(servletRequest.getHeaderNames())
+        Map<String, Collection<String>> headers = Collections.list(servletRequest.getHeaderNames())
                 .stream()
-                .collect(Collectors.toMap(Function.identity(), servletRequest::getHeader));
+                .distinct()
+                .collect(Collectors.toMap(Function.identity(), h -> Collections.list(servletRequest.getHeaders(h))));
         final String requestLog = String.join(System.lineSeparator(),
                 "Inbound Request:",
                 "URI: " + servletRequest.getRequestURI() + "?" + servletRequest.getQueryString(),
@@ -43,8 +45,9 @@ public class RequestLoggingInterceptor extends HandlerInterceptorAdapter {
     }
 
     private String getMessage(WrappedHttpServletResponse response) {
-        Map<String, String> headers = OptionalCollection.streamOf(response.getHeaderNames())
-                .collect(Collectors.toMap(Function.identity(), response::getHeader));
+        Map<String, Collection<String>> headers = OptionalCollection.streamOf(response.getHeaderNames())
+                .distinct()
+                .collect(Collectors.toMap(Function.identity(), response::getHeaders));
         return String.join(System.lineSeparator(),
                 "Outbound Response:",
                 "Status: " + response.getStatus(),
